@@ -13,9 +13,8 @@ public class TextStatement extends Statement {
 
     @Override
     protected String footer(Customer aCustomer) {
-        String result = "Amount owed is " + String.valueOf(aCustomer.getTotalCharge()) + "\n";
-        result += "You earned " + String.valueOf(aCustomer.getTotalFrequentRenterPoints()) +
+        return "Amount owed is " + aCustomer.getTotalCharge() + "\n" +
+                "You earned " + aCustomer.getTotalFrequentRenterPoints() +
                 " frequent renter points";
-        return result;
     }
 }
